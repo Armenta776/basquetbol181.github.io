@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas NBA Temporada 2022-2023</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #1d428a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #1d428a;
+            border-bottom: 2px solid #c9082a;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        
+        .conferencia {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #1d428a;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .logo-equipo {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: #c9082a;
+        }
+        
+        .playoffs {
+            background-color: #e6f7ff;
+        }
+        
+        .playin {
+            background-color: #fff7e6;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #1d428a;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            th, td {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+            
+            .hide-mobile {
+                display: none;
+            }
+        }
+        
+        .tab-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab.active {
+            background-color: #1d428a;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Estadísticas NBA Temporada 2022-2023</h1>
+        <p>Resultados, clasificaciones y estadísticas de equipos</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index4.html">Historia</a></li>
+            <li><a href="index%208.html">Estadísticas</a></li>
+            <li><a href="index5.html">Jugadores</a></li>
+            <li><a href="index%206.html">Ligas</a></li>
+            <li><a href="index%207.html">Equipos de la NBA</a></li>
+        </ul>
+    </nav>
+    
+    <div class="tab-container">
+        <div class="tab active" onclick="openTab('este')">Conferencia Este</div>
+        <div class="tab" onclick="openTab('oeste')">Conferencia Oeste</div>
+        <div class="tab" onclick="openTab('leaders')">Líderes Estadísticos</div>
+    </div>
+    
+    <div id="este" class="tab-content active">
+        <div class="conferencia">
+            <h2>Conferencia Este - Clasificación Final</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Equipo</th>
+                        <th>G</th>
+                        <th>P</th>
+                        <th>%</th>
+                        <th class="hide-mobile">Diferencia</th>
+                        <th class="hide-mobile">Casa</th>
+                        <th class="hide-mobile">Fuera</th>
+                        <th>Últ. 10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="playoffs">
+                        <td>1</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg" alt="Bucks" class="logo-equipo"> Milwaukee Bucks</td>
+                        <td class="highlight">58</td>
+                        <td>24</td>
+                        <td>.707</td>
+                        <td class="hide-mobile">-</td>
+                        <td class="hide-mobile">32-9</td>
+                        <td class="hide-mobile">26-15</td>
+                        <td>7-3</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>2</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg" alt="Celtics" class="logo-equipo"> Boston Celtics</td>
+                        <td class="highlight">57</td>
+                        <td>25</td>
+                        <td>.695</td>
+                        <td class="hide-mobile">1.0</td>
+                        <td class="hide-mobile">32-9</td>
+                        <td class="hide-mobile">25-16</td>
+                        <td>7-3</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>3</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg" alt="76ers" class="logo-equipo"> Philadelphia 76ers</td>
+                        <td class="highlight">54</td>
+                        <td>28</td>
+                        <td>.659</td>
+                        <td class="hide-mobile">4.0</td>
+                        <td class="hide-mobile">29-12</td>
+                        <td class="hide-mobile">25-16</td>
+                        <td>8-2</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>4</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg" alt="Cavaliers" class="logo-equipo"> Cleveland Cavaliers</td>
+                        <td>51</td>
+                        <td>31</td>
+                        <td>.622</td>
+                        <td class="hide-mobile">7.0</td>
+                        <td class="hide-mobile">31-10</td>
+                        <td class="hide-mobile">20-21</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>5</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg" alt="Knicks" class="logo-equipo"> New York Knicks</td>
+                        <td>47</td>
+                        <td>35</td>
+                        <td>.573</td>
+                        <td class="hide-mobile">11.0</td>
+                        <td class="hide-mobile">23-18</td>
+                        <td class="hide-mobile">24-17</td>
+                        <td>7-3</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>6</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg" alt="Nets" class="logo-equipo"> Brooklyn Nets</td>
+                        <td>45</td>
+                        <td>37</td>
+                        <td>.549</td>
+                        <td class="hide-mobile">13.0</td>
+                        <td class="hide-mobile">23-18</td>
+                        <td class="hide-mobile">22-19</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>7</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg" alt="Hawks" class="logo-equipo"> Atlanta Hawks</td>
+                        <td>41</td>
+                        <td>41</td>
+                        <td>.500</td>
+                        <td class="hide-mobile">17.0</td>
+                        <td class="hide-mobile">24-17</td>
+                        <td class="hide-mobile">17-24</td>
+                        <td>6-4</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>8</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg" alt="Heat" class="logo-equipo"> Miami Heat</td>
+                        <td>44</td>
+                        <td>38</td>
+                        <td>.537</td>
+                        <td class="hide-mobile">14.0</td>
+                        <td class="hide-mobile">27-14</td>
+                        <td class="hide-mobile">17-24</td>
+                        <td>4-6</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>9</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg" alt="Raptors" class="logo-equipo"> Toronto Raptors</td>
+                        <td>41</td>
+                        <td>41</td>
+                        <td>.500</td>
+                        <td class="hide-mobile">17.0</td>
+                        <td class="hide-mobile">27-14</td>
+                        <td class="hide-mobile">14-27</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>10</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg" alt="Bulls" class="logo-equipo"> Chicago Bulls</td>
+                        <td>40</td>
+                        <td>42</td>
+                        <td>.488</td>
+                        <td class="hide-mobile">18.0</td>
+                        <td class="hide-mobile">22-19</td>
+                        <td class="hide-mobile">18-23</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg" alt="Pacers" class="logo-equipo"> Indiana Pacers</td>
+                        <td>35</td>
+                        <td>47</td>
+                        <td>.427</td>
+                        <td class="hide-mobile">23.0</td>
+                        <td class="hide-mobile">20-21</td>
+                        <td class="hide-mobile">15-26</td>
+                        <td>4-6</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg" alt="Wizards" class="logo-equipo"> Washington Wizards</td>
+                        <td>35</td>
+                        <td>47</td>
+                        <td>.427</td>
+                        <td class="hide-mobile">23.0</td>
+                        <td class="hide-mobile">19-22</td>
+                        <td class="hide-mobile">16-25</td>
+                        <td>3-7</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg" alt="Magic" class="logo-equipo"> Orlando Magic</td>
+                        <td>34</td>
+                        <td>48</td>
+                        <td>.415</td>
+                        <td class="hide-mobile">24.0</td>
+                        <td class="hide-mobile">20-21</td>
+                        <td class="hide-mobile">14-27</td>
+                        <td>6-4</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg" alt="Hornets" class="logo-equipo"> Charlotte Hornets</td>
+                        <td>27</td>
+                        <td>55</td>
+                        <td>.329</td>
+                        <td class="hide-mobile">31.0</td>
+                        <td class="hide-mobile">13-28</td>
+                        <td class="hide-mobile">14-27</td>
+                        <td>2-8</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg" alt="Timberwolves" class="logo-equipo"> Detroit Pistons</td>
+                        <td>17</td>
+                        <td>65</td>
+                        <td>.207</td>
+                        <td class="hide-mobile">41.0</td>
+                        <td class="hide-mobile">9-32</td>
+                        <td class="hide-mobile">8-33</td>
+                        <td>1-9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="oeste" class="tab-content">
+        <div class="conferencia">
+            <h2>Conferencia Oeste - Clasificación Final</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Equipo</th>
+                        <th>G</th>
+                        <th>P</th>
+                        <th>%</th>
+                        <th class="hide-mobile">Diferencia</th>
+                        <th class="hide-mobile">Casa</th>
+                        <th class="hide-mobile">Fuera</th>
+                        <th>Últ. 10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="playoffs">
+                        <td>1</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg" alt="Nuggets" class="logo-equipo"> Denver Nuggets</td>
+                        <td class="highlight">53</td>
+                        <td>29</td>
+                        <td>.646</td>
+                        <td class="hide-mobile">-</td>
+                        <td class="hide-mobile">34-7</td>
+                        <td class="hide-mobile">19-22</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>2</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg" alt="Grizzlies" class="logo-equipo"> Memphis Grizzlies</td>
+                        <td class="highlight">51</td>
+                        <td>31</td>
+                        <td>.622</td>
+                        <td class="hide-mobile">2.0</td>
+                        <td class="hide-mobile">35-6</td>
+                        <td class="hide-mobile">16-25</td>
+                        <td>7-3</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>3</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg" alt="Kings" class="logo-equipo"> Sacramento Kings</td>
+                        <td class="highlight">48</td>
+                        <td>34</td>
+                        <td>.585</td>
+                        <td class="hide-mobile">5.0</td>
+                        <td class="hide-mobile">23-18</td>
+                        <td class="hide-mobile">25-16</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>4</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612756/primary/L/logo.svg" alt="Suns" class="logo-equipo"> Phoenix Suns</td>
+                        <td>45</td>
+                        <td>37</td>
+                        <td>.549</td>
+                        <td class="hide-mobile">8.0</td>
+                        <td class="hide-mobile">28-13</td>
+                        <td class="hide-mobile">17-24</td>
+                        <td>4-6</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>5</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg" alt="Clippers" class="logo-equipo"> LA Clippers</td>
+                        <td>44</td>
+                        <td>38</td>
+                        <td>.537</td>
+                        <td class="hide-mobile">9.0</td>
+                        <td class="hide-mobile">23-18</td>
+                        <td class="hide-mobile">21-20</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playoffs">
+                        <td>6</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg" alt="Warriors" class="logo-equipo"> Golden State Warriors</td>
+                        <td>44</td>
+                        <td>38</td>
+                        <td>.537</td>
+                        <td class="hide-mobile">9.0</td>
+                        <td class="hide-mobile">33-8</td>
+                        <td class="hide-mobile">11-30</td>
+                        <td>7-3</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>7</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg" alt="Lakers" class="logo-equipo"> Los Angeles Lakers</td>
+                        <td>43</td>
+                        <td>39</td>
+                        <td>.524</td>
+                        <td class="hide-mobile">10.0</td>
+                        <td class="hide-mobile">23-18</td>
+                        <td class="hide-mobile">20-21</td>
+                        <td>8-2</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>8</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg" alt="Timberwolves" class="logo-equipo"> Minnesota Timberwolves</td>
+                        <td>42</td>
+                        <td>40</td>
+                        <td>.512</td>
+                        <td class="hide-mobile">11.0</td>
+                        <td class="hide-mobile">22-19</td>
+                        <td class="hide-mobile">20-21</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>9</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg" alt="Pelicans" class="logo-equipo"> New Orleans Pelicans</td>
+                        <td>42</td>
+                        <td>40</td>
+                        <td>.512</td>
+                        <td class="hide-mobile">11.0</td>
+                        <td class="hide-mobile">27-14</td>
+                        <td class="hide-mobile">15-26</td>
+                        <td>5-5</td>
+                    </tr>
+                    <tr class="playin">
+                        <td>10</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg" alt="Thunder" class="logo-equipo"> Oklahoma City Thunder</td>
+                        <td>40</td>
+                        <td>42</td>
+                        <td>.488</td>
+                        <td class="hide-mobile">13.0</td>
+                        <td class="hide-mobile">24-17</td>
+                        <td class="hide-mobile">16-25</td>
+                        <td>6-4</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg" alt="Mavericks" class="logo-equipo"> Dallas Mavericks</td>
+                        <td>38</td>
+                        <td>44</td>
+                        <td>.463</td>
+                        <td class="hide-mobile">15.0</td>
+                        <td class="hide-mobile">23-18</td>
+                        <td class="hide-mobile">15-26</td>
+                        <td>2-8</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg" alt="Jazz" class="logo-equipo"> Utah Jazz</td>
+                        <td>37</td>
+                        <td>45</td>
+                        <td>.451</td>
+                        <td class="hide-mobile">16.0</td>
+                        <td class="hide-mobile">23-18</td>
+                        <td class="hide-mobile">14-27</td>
+                        <td>4-6</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg" alt="Trail Blazers" class="logo-equipo"> Portland Trail Blazers</td>
+                        <td>33</td>
+                        <td>49</td>
+                        <td>.402</td>
+                        <td class="hide-mobile">20.0</td>
+                        <td class="hide-mobile">17-24</td>
+                        <td class="hide-mobile">16-25</td>
+                        <td>2-8</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg" alt="Rockets" class="logo-equipo"> Houston Rockets</td>
+                        <td>22</td>
+                        <td>60</td>
+                        <td>.268</td>
+                        <td class="hide-mobile">31.0</td>
+                        <td class="hide-mobile">14-27</td>
+                        <td class="hide-mobile">8-33</td>
+                        <td>3-7</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg" alt="Spurs" class="logo-equipo"> San Antonio Spurs</td>
+                        <td>22</td>
+                        <td>60</td>
+                        <td>.268</td>
+                        <td class="hide-mobile">31.0</td>
+                        <td class="hide-mobile">14-27</td>
+                        <td class="hide-mobile">8-33</td>
+                        <td>3-7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="leaders" class="tab-content">
+        <div class="conferencia">
+            <h2>Líderes Estadísticos de la Temporada 2022-2023</h2>
+            
+            <h3>Puntos por Partido</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Jugador</th>
+                        <th>Equipo</th>
+                        <th>PPG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Joel Embiid</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg" class="logo-equipo"> 76ers</td>
+                        <td class="highlight">33.1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Luka Dončić</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg" class="logo-equipo"> Mavericks</td>
+                        <td>32.4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Damian Lillard</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg" class="logo-equipo"> Trail Blazers</td>
+                        <td>32.2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shai Gilgeous-Alexander</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg" class="logo-equipo"> Thunder</td>
+                        <td>31.4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Giannis Antetokounmpo</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg" class="logo-equipo"> Bucks</td>
+                        <td>31.1</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Rebotes por Partido</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Jugador</th>
+                        <th>Equipo</th>
+                        <th>RPG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Domantas Sabonis</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg" class="logo-equipo"> Kings</td>
+                        <td class="highlight">12.3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Nikola Jokić</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg" class="logo-equipo"> Nuggets</td>
+                        <td>11.8</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Rudy Gobert</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg" class="logo-equipo"> Timberwolves</td>
+                        <td>11.6</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Clint Capela</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg" class="logo-equipo"> Hawks</td>
+                        <td>11.0</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Anthony Davis</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg" class="logo-equipo"> Lakers</td>
+                        <td>12.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Asistencias por Partido</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Jugador</th>
+                        <th>Equipo</th>
+                        <th>APG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>James Harden</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg" class="logo-equipo"> 76ers</td>
+                        <td class="highlight">10.7</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Trae Young</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg" class="logo-equipo"> Hawks</td>
+                        <td>10.2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Nikola Jokić</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg" class="logo-equipo"> Nuggets</td>
+                        <td>9.8</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Tyrese Haliburton</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg" class="logo-equipo"> Pacers</td>
+                        <td>10.4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Luka Dončić</td>
+                        <td><img src="https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg" class="logo-equipo"> Mavericks</td>
+                        <td>8.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 Estadísticas NBA | Temporada 2022-2023</p>
+        <p>Datos oficiales de NBA.com | Actualizado al final de temporada regular</p>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            // Oculta todos los contenidos de pestaña
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            // Desactiva todas las pestañas
+            var tabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            
+            // Activa la pestaña seleccionada
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

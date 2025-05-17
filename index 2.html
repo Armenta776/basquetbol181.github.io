@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Completa de los Equipos de la NBA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #1d428a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #1d428a;
+            border-bottom: 2px solid #c9082a;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        
+        .conferencia {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .equipo {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .equipo:last-child {
+            border-bottom: none;
+        }
+        
+        .logo-equipo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .nombre-equipo {
+            font-weight: bold;
+            color: #1d428a;
+            font-size: 1.5em;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .info-equipo {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .campeonatos {
+            font-weight: bold;
+            color: #c9082a;
+        }
+        
+        .jugadores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .jugador {
+            text-align: center;
+            width: 100px;
+        }
+        
+        .foto-jugador {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #1d428a;
+        }
+        
+        .nombre-jugador {
+            font-size: 0.8em;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #1d428a;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .logo-equipo {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .jugador {
+                width: 70px;
+            }
+            
+            .foto-jugador {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Equipos de la NBA: Historia Completa</h1>
+        <p>Logos, mejores jugadores y campeonatos de todos los equipos de la NBA</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index4.html">Historia</a></li>
+            <li><a href="index%208.html">Estadísticas</a></li>
+            <li><a href="index5.html">Jugadores</a></li>
+            <li><a href="index%206.html">Ligas</a></li>
+            <li><a href="index%207.html">Equipos de la NBA</a></li>
+        </ul>
+    </nav>
+    
+    <div class="conferencia">
+        <h2>Conferencia Este</h2>
+        
+        <!-- Boston Celtics -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg" alt="Boston Celtics" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">Boston Celtics</div>
+                <p><strong>Fundación:</strong> 1946 en Boston, Massachusetts</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">17</span> (1957, 1959-1966, 1968, 1969, 1974, 1976, 1981, 1984, 1986, 2008)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/78049.png" alt="Bill Russell" class="foto-jugador">
+                        <div class="nombre-jugador">Bill Russell</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1449.png" alt="Larry Bird" class="foto-jugador">
+                        <div class="nombre-jugador">Larry Bird</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1718.png" alt="Paul Pierce" class="foto-jugador">
+                        <div class="nombre-jugador">Paul Pierce</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/76975.png" alt="John Havlicek" class="foto-jugador">
+                        <div class="nombre-jugador">John Havlicek</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New York Knicks -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg" alt="New York Knicks" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">New York Knicks</div>
+                <p><strong>Fundación:</strong> 1946 en Nueva York, Nueva York</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">2</span> (1970, 1973)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/77235.png" alt="Walt Frazier" class="foto-jugador">
+                        <div class="nombre-jugador">Walt Frazier</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/303.png" alt="Patrick Ewing" class="foto-jugador">
+                        <div class="nombre-jugador">Patrick Ewing</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/77400.png" alt="Willis Reed" class="foto-jugador">
+                        <div class="nombre-jugador">Willis Reed</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/2546.png" alt="Carmelo Anthony" class="foto-jugador">
+                        <div class="nombre-jugador">Carmelo Anthony</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Philadelphia 76ers -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg" alt="Philadelphia 76ers" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">Philadelphia 76ers</div>
+                <p><strong>Fundación:</strong> 1946 (como Syracuse Nationals), trasladados a Philadelphia en 1963</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">3</span> (1955, 1967, 1983)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/76375.png" alt="Wilt Chamberlain" class="foto-jugador">
+                        <div class="nombre-jugador">Wilt Chamberlain</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/76376.png" alt="Julius Erving" class="foto-jugador">
+                        <div class="nombre-jugador">Julius Erving</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/947.png" alt="Allen Iverson" class="foto-jugador">
+                        <div class="nombre-jugador">Allen Iverson</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/706.png" alt="Charles Barkley" class="foto-jugador">
+                        <div class="nombre-jugador">Charles Barkley</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Toronto Raptors -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg" alt="Toronto Raptors" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">Toronto Raptors</div>
+                <p><strong>Fundación:</strong> 1995 en Toronto, Ontario (Canadá)</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">1</span> (2019)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/202695.png" alt="Kawhi Leonard" class="foto-jugador">
+                        <div class="nombre-jugador">Kawhi Leonard</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/200768.png" alt="Kyle Lowry" class="foto-jugador">
+                        <div class="nombre-jugador">Kyle Lowry</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1713.png" alt="Vince Carter" class="foto-jugador">
+                        <div class="nombre-jugador">Vince Carter</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/201942.png" alt="DeMar DeRozan" class="foto-jugador">
+                        <div class="nombre-jugador">DeMar DeRozan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chicago Bulls -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg" alt="Chicago Bulls" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">Chicago Bulls</div>
+                <p><strong>Fundación:</strong> 1966 en Chicago, Illinois</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">6</span> (1991-1993, 1996-1998)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/893.png" alt="Michael Jordan" class="foto-jugador">
+                        <div class="nombre-jugador">Michael Jordan</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/777.png" alt="Scottie Pippen" class="foto-jugador">
+                        <div class="nombre-jugador">Scottie Pippen</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/201565.png" alt="Derrick Rose" class="foto-jugador">
+                        <div class="nombre-jugador">Derrick Rose</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/763.png" alt="Dennis Rodman" class="foto-jugador">
+                        <div class="nombre-jugador">Dennis Rodman</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Los Angeles Lakers -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg" alt="Los Angeles Lakers" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">Los Angeles Lakers</div>
+                <p><strong>Fundación:</strong> 1947 (en Minneapolis), trasladados a Los Angeles en 1960</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">17</span> (1949, 1950, 1952-1954, 1972, 1980, 1982, 1985, 1987, 1988, 2000-2002, 2009, 2010, 2020)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/77142.png" alt="Magic Johnson" class="foto-jugador">
+                        <div class="nombre-jugador">Magic Johnson</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/76375.png" alt="Kareem Abdul-Jabbar" class="foto-jugador">
+                        <div class="nombre-jugador">Kareem Abdul-Jabbar</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/977.png" alt="Kobe Bryant" class="foto-jugador">
+                        <div class="nombre-jugador">Kobe Bryant</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/406.png" alt="Shaquille O'Neal" class="foto-jugador">
+                        <div class="nombre-jugador">Shaquille O'Neal</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" alt="LeBron James" class="foto-jugador">
+                        <div class="nombre-jugador">LeBron James</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Golden State Warriors -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg" alt="Golden State Warriors" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">Golden State Warriors</div>
+                <p><strong>Fundación:</strong> 1946 (en Filadelfia), trasladados a San Francisco en 1962, luego a Oakland</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">7</span> (1947, 1956, 1975, 2015, 2017, 2018, 2022)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png" alt="Stephen Curry" class="foto-jugador">
+                        <div class="nombre-jugador">Stephen Curry</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/76375.png" alt="Wilt Chamberlain" class="foto-jugador">
+                        <div class="nombre-jugador">Wilt Chamberlain</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/76377.png" alt="Rick Barry" class="foto-jugador">
+                        <div class="nombre-jugador">Rick Barry</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png" alt="Kevin Durant" class="foto-jugador">
+                        <div class="nombre-jugador">Kevin Durant</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/202691.png" alt="Klay Thompson" class="foto-jugador">
+                        <div class="nombre-jugador">Klay Thompson</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- San Antonio Spurs -->
+        <div class="equipo">
+            <img src="https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg" alt="San Antonio Spurs" class="logo-equipo">
+            <div class="info-equipo">
+                <div class="nombre-equipo">San Antonio Spurs</div>
+                <p><strong>Fundación:</strong> 1967 (en la ABA), unidos a la NBA en 1976</p>
+                <p><strong>Campeonatos:</strong> <span class="campeonatos">5</span> (1999, 2003, 2005, 2007, 2014)</p>
+                <p><strong>Mejores jugadores:</strong></p>
+                <div class="jugadores">
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1495.png" alt="Tim Duncan" class="foto-jugador">
+                        <div class="nombre-jugador">Tim Duncan</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/764.png" alt="David Robinson" class="foto-jugador">
+                        <div class="nombre-jugador">David Robinson</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/2225.png" alt="Tony Parker" class="foto-jugador">
+                        <div class="nombre-jugador">Tony Parker</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/1938.png" alt="Manu Ginóbili" class="foto-jugador">
+                        <div class="nombre-jugador">Manu Ginóbili</div>
+                    </div>
+                    <div class="jugador">
+                        <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/202695.png" alt="Kawhi Leonard" class="foto-jugador">
+                        <div class="nombre-jugador">Kawhi Leonard</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 Historia Completa de la NBA | Todos los derechos reservados</p>
+        <p>Datos actualizados hasta la temporada 2022-2023</p>
+        <p>Imágenes cortesía de NBA.com</p>
+    </footer>
+</body>
+</html>
