@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia del Baloncesto</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 8px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #e74c3c;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .event {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .event::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid #e74c3c;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #e74c3c;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #e74c3c;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #e74c3c;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #e74c3c transparent transparent;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .event {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .event::before {
+                left: 60px;
+                border: medium solid #e74c3c;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #e74c3c transparent transparent;
+            }
+            .left::after, .right::after {
+                left: 15px;
+            }
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Historia del Baloncesto</h1>
+            <p>Desde sus humildes comienzos hasta convertirse en un deporte global</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index4.html">Historia</a></li>
+            <li><a href="index%208.html">Estadísticas</a></li>
+            <li><a href="index5.html">Jugadores</a></li>
+            <li><a href="index%206.html">Ligas</a></li>
+            <li><a href="index%207.html">Equipos de la NBA</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2>Introducción</h2>
+            <p>El baloncesto es uno de los deportes más populares del mundo, jugado por millones de personas en todos los continentes. Pero su historia comenzó de manera bastante modesta en un gimnasio de Massachusetts, Estados Unidos.</p>
+            
+            <div class="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRuxl5ejqMpyAAehy6ropZTcE5Miuq_3zI7i6GBzERrtVZM4Zf_jeHVzVqvMoZaZi_QyTxNtXylOFr95XUD4WM0w" alt="James Naismith, inventor del baloncesto">
+                <p class="image-caption">James Naismith, el inventor del baloncesto</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Línea de Tiempo</h2>
+            <div class="timeline">
+                <div class="event left">
+                    <div class="content">
+                        <h3>1891: El nacimiento del baloncesto</h3>
+                        <p>El Dr. James Naismith, un instructor de educación física canadiense en la YMCA de Springfield, Massachusetts, inventó el baloncesto para mantener a los estudiantes activos durante el invierno. Las primeras reglas incluían 13 puntos básicos y se jugaba con un balón de fútbol y dos cestas de melocotones como canastas.</p>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>1893: Primer partido femenino</h3>
+                        <p>El primer partido de baloncesto femenino se jugó en el Smith College en Northampton, Massachusetts, solo dos años después de la invención del juego. Senda Berenson, considerada la "madre del baloncesto femenino", adaptó las reglas para las mujeres.</p>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="content">
+                        <h3>1936: Debut olímpico</h3>
+                        <p>El baloncesto se convirtió en deporte olímpico en los Juegos de Berlín 1936. Naismith, entonces de 75 años, asistió para lanzar el primer saque. Estados Unidos ganó la primera medalla de oro olímpica en baloncesto.</p>
+                        <div class="image-container">
+                            <img src="https://i0.wp.com/momentodeportivord.com/wp-content/uploads/2020/10/Basquet-2.png?resize=826%2C468&ssl=1" alt="Baloncesto en los Juegos Olímpicos de 1936">
+                            <p class="image-caption">Partido de baloncesto en los Juegos Olímpicos de Berlín 1936</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>1946: Nace la NBA</h3>
+                        <p>Se funda la Basketball Association of America (BAA), que en 1949 se fusionaría con la National Basketball League (NBL) para formar la National Basketball Association (NBA), la liga profesional más importante del mundo.</p>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="content">
+                        <h3>1950: Primer Mundial</h3>
+                        <p>Se celebra el primer Campeonato Mundial de Baloncesto (FIBA) en Argentina, con la participación de 10 equipos nacionales. Argentina se convirtió en el primer campeón mundial.</p>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>1976: Baloncesto femenino olímpico</h3>
+                        <p>El baloncesto femenino se incluye por primera vez en el programa olímpico en los Juegos de Montreal. La Unión Soviética ganó la primera medalla de oro.</p>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="content">
+                        <h3>1992: El Dream Team</h3>
+                        <p>Por primera vez, la NBA permite a sus jugadores participar en los Juegos Olímpicos. El "Dream Team" estadounidense, con Michael Jordan, Magic Johnson y Larry Bird, dominó los Juegos de Barcelona y popularizó el baloncesto a nivel mundial.</p>
+                        <div class="image-container">
+                            <img src="https://www.record.com.mx/sites/default/files/articulos/2024/07/20/record1773-17.jpg" alt="El Dream Team de 1992">
+                            <p class="image-caption">El legendario Dream Team de EE.UU. en los Juegos Olímpicos de Barcelona 1992</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>2000s: Globalización del juego</h3>
+                        <p>Jugadores internacionales como Dirk Nowitzki (Alemania), Yao Ming (China), Manu Ginóbili (Argentina) y Pau Gasol (España) se convierten en estrellas de la NBA, demostrando el crecimiento global del deporte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Evolución del Equipamiento</h2>
+            <div class="image-container">
+                <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photo/20464218/image/medium-d32b2fd1d9466e007dd98c37117e6925.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJB6ZCNNAN7BE7WDQ%2F20250512%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250512T145150Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=1704291429e0eda45c4307cf6bd4d1654bbdf7d9b9309414be1f295927d13c2e" alt="Evolución del balón de baloncesto">
+                <p class="image-caption">Evolución del balón de baloncesto a través del tiempo</p>
+            </div>
+            <p>El equipamiento del baloncesto ha evolucionado significativamente desde sus inicios:</p>
+            <ul>
+                <li><strong>Balones:</strong> De balones de fútbol a balones específicos con superficie de cuero (y luego sintética) y líneas características para mejor agarre.</li>
+                <li><strong>Canastas:</strong> De cestas de melocotón con fondo (requerían escalera para recuperar el balón) a aros de metal con redes abiertas y tableros.</li>
+                <li><strong>Indumentaria:</strong> De pantalones largos y camisas de manga larga a shorts holgados y camisetas sin mangas más ligeras.</li>
+                <li><strong>Zapatillas:</strong> De zapatos básicos a zapatillas especializadas con amortiguación y soporte para saltos y cambios de dirección.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>El Baloncesto Hoy</h2>
+            <p>Hoy en día, el baloncesto es uno de los deportes más populares del mundo, con ligas profesionales en numerosos países y millones de jugadores aficionados. La NBA sigue siendo la liga más prestigiosa, pero competiciones como la EuroLeague, la Liga ACB (España) y la Liga Nacional (Argentina) tienen gran seguimiento.</p>
+            <p>El baloncesto callejero y el 3x3 (que debutó olímpicamente en Tokio 2020) han llevado el juego a nuevos niveles de accesibilidad y popularidad. El deporte sigue evolucionando con cambios en las reglas, estrategias y estilos de juego.</p>
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/LeBron_James_Layup_%28Cleveland_vs_Brooklyn_2018%29.jpg/800px-LeBron_James_Layup_%28Cleveland_vs_Brooklyn_2018%29.jpg" alt="Baloncesto moderno">
+                <p class="image-caption">LeBron James, una de las estrellas actuales de la NBA</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Historia del Baloncesto - Todos los derechos reservados</p>
+            <p>Las imágenes utilizadas son de dominio público o tienen licencia Creative Commons</p>
+        </div>
+    </footer>
+</body>
+</html>
