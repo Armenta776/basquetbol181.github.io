@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo del Baloncesto</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .imagen-destacada {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .imagen-destacada img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .estadisticas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .tarjeta-estadistica {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #ff6600;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mundo del Basquetbol</h1>
+        <p>Todo sobre el deporte de la canasta</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index4.html">Historia</a></li>
+            <li><a href="index%208.html">Estadísticas</a></li>
+            <li><a href="index5.html">Jugadores</a></li>
+            <li><a href="index%206.html">Ligas</a></li>
+            <li><a href="index%207.html">Equipos de la NBA</a></li>
+        </ul>
+    </nav>
+    
+    <section id="inicio">
+        <h2>Bienvenidos al Mundo del Baloncesto</h2>
+        <div class="imagen-destacada">
+            <img src="https://static.elcanaldelfutbol.com/static/news/Cumplea%C3%B1os_MJok.large.jpg" alt="El mejor jugador de todos los tiempos">
+            <p>El mejor jugador de todos los tiempos</p>
+        </div>
+    </section>
+    
+    <section id="historia">
+        <h2>Historia del Baloncesto</h2>
+        <p>El baloncesto fue inventado en 1891 por James Naismith, un profesor de educación física canadiense, en Springfield, Massachusetts. El juego se creó como una actividad indoor para mantener a los estudiantes activos durante el invierno.</p>
+        
+        <div class="imagen-destacada">
+            <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/2e0nndh.jpg?w=1600" alt="Cancha de baloncesto antigua">
+            <p>Idea del juego</p>
+        </div>
+    </section>
+    
+    <section id="estadisticas">
+        <h2>Estadísticas del Baloncesto</h2>
+        
+        <div class="estadisticas">
+            <div class="tarjeta-estadistica">
+                <h3>Estadísticas NBA 2023</h3>
+                <ul>
+                    <li>Puntos por partido: 114.7</li>
+                    <li>Porcentaje de tiros de campo: 47.2%</li>
+                    <li>Porcentaje de triples: 36.1%</li>
+                    <li>Rebotes por partido: 44.2</li>
+                    <li>Asistencias por partido: 24.8</li>
+                </ul>
+            </div>
+            
+            <div class="tarjeta-estadistica">
+                <h3>Récords NBA</h3>
+                <ul>
+                    <li>Más puntos en un partido: Wilt Chamberlain (100)</li>
+                    <li>Más triples en una temporada: Stephen Curry (402)</li>
+                    <li>Más asistencias en carrera: John Stockton (15,806)</li>
+                    <li>Más rebotes en carrera: Wilt Chamberlain (23,924)</li>
+                    <li>Más anillos de campeonato: Bill Russell (11)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Líderes actuales de la NBA</h3>
+        <table>
+            <tr>
+                <th>Categoría</th>
+                <th>Jugador</th>
+                <th>Equipo</th>
+                <th>Estadística</th>
+            </tr>
+            <tr>
+                <td>Puntos por partido</td>
+                <td>Luka Dončić</td>
+                <td>Dallas Mavericks</td>
+                <td>33.9</td>
+            </tr>
+            <tr>
+                <td>Rebotes por partido</td>
+                <td>Domantas Sabonis</td>
+                <td>Sacramento Kings</td>
+                <td>13.7</td>
+            </tr>
+            <tr>
+                <td>Asistencias por partido</td>
+                <td>Tyrese Haliburton</td>
+                <td>Indiana Pacers</td>
+                <td>10.9</td>
+            </tr>
+            <tr>
+                <td>Robos por partido</td>
+                <td>Shai Gilgeous-Alexander</td>
+                <td>Oklahoma City Thunder</td>
+                <td>2.1</td>
+            </tr>
+            <tr>
+                <td>Tapones por partido</td>
+                <td>Victor Wembanyama</td>
+                <td>San Antonio Spurs</td>
+                <td>3.5</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="jugadores">
+        <h2>Jugadores Legendarios</h2>
+        
+        <div class="estadisticas">
+            <div class="tarjeta-estadistica">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSatPLGM3QYlrF_fG1IHYxwWbB4nuZTv8djEQ&s" alt="Michael Jordan" style="width:100%; border-radius:8px;">
+                <h3>Michael Jordan</h3>
+                <p>6 veces campeón de la NBA, 5 veces MVP, considerado por muchos como el mejor jugador de todos los tiempos.</p>
+                <p><strong>Promedios carrera:</strong> 30.1 pts, 6.2 reb, 5.3 ast</p>
+            </div>
+            
+            <div class="tarjeta-estadistica">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTufYdg55UJUiECmNeGTw9k4gVA26UIjXfuCg&s" alt="LeBron James" style="width:100%; border-radius:8px;">
+                <h3>LeBron James</h3>
+                <p>4 veces campeón de la NBA, 4 veces MVP, máximo anotador histórico de la NBA.</p>
+                <p><strong>Promedios carrera:</strong> 27.2 pts, 7.5 reb, 7.3 ast</p>
+            </div>
+            
+            <div class="tarjeta-estadistica">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Kobe_Bryant_8.jpg/1200px-Kobe_Bryant_8.jpg" alt="Kobe Bryant" style="width:100%; border-radius:8px;">
+                <h3>Kobe Bryant</h3>
+                <p>5 veces campeón de la NBA, 1 vez MVP</p>
+                <p><strong>Promedios carrera:</strong>25.0 pts, 5.2 reb, 4.7 ast </p>
+            </div>
+         <div class="estadisticas">
+            <div class="tarjeta-estadistica">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxbhDWvgGToO7-lFKfEtJhY6N-sOKW03JECQ&s" alt="Stephen curry" style="width:100%; border-radius:8px;">
+                 <h3>Stephen Curry</h3>
+                <p>4 veces campeón de la NBA, 1 vez MVP, considerado por muchos como el mejor tirador de todos los tiempos.</p>
+                <p><strong>Promedios carrera:</strong> 24.5 pts, 4.4 reb, 6 ast</p>
+            </div>
+            <div class="tarjeta-estadistica">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kevin_Durant_%28Wizards_v._Warriors%2C_1-24-2019%29_%28cropped%29.jpg/640px-Kevin_Durant_%28Wizards_v._Warriors%2C_1-24-2019%29_%28cropped%29.jpg" alt="Kevin Durant" style="width:100%; border-radius:8px;">
+                <h3>Kevin Durant</h3>
+                <p>2 veces campeón de la NBA, 1 vez MVP</p>
+                <p><strong>Promedios carrera:</strong> 26.6 pts, 6.0 reb, 4.2 ast</p>
+            </div>
+    </section>
+     <section id="Equipos de la NBA">
+        <h2>Logos de los equipos de la NBA Natinal Basketball Asociation</h2>
+        <div class="imagen-destacada">
+            <img src="https://enclaveculer.com/wp-content/uploads/2014/10/nba1.jpg" alt="Equipos de la NBA">
+            <p>Todos los equipos de la NBA</p>
+        </div>
+    </section>
+    
+    <section id="ligas">
+        <h2>Ligas Principales</h2>
+        
+        <div class="estadisticas">
+            <div class="tarjeta-estadistica">
+                <h3>NBA (Estados Unidos)</h3>
+                <p>La liga más importante del mundo, fundada en 1946. Actualmente cuenta con 30 equipos.</p>
+                <p><strong>Último campeón:</strong> Boston Celtics (2024)</p>
+            </div>
+            
+            <div class="tarjeta-estadistica">
+                <h3>Euroliga (Europa)</h3>
+                <p>La máxima competición de clubes de baloncesto en Europa, fundada en 1958.</p>
+                <p><strong>Último campeón:</strong> Real Madrid (2023)</p>
+            </div>
+            
+            <div class="tarjeta-estadistica">
+                <h3>ACB (España)</h3>
+                <p>Considerada una de las mejores ligas del mundo fuera de la NBA.</p>
+                <p><strong>Último campeón:</strong> FC Barcelona (2023)</p>
+            </div>
+        </div>
+        
+        <div class="imagen-destacada">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/1d/b4/10/united-center.jpg?w=900&h=500&s=1" alt="Estadio de la NBA">
+            <p>Moderno estadio de baloncesto con capacidad para 20,000 espectadores</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Mundo del Baloncesto - Todos los derechos reservados</p>
+        <p>Contacto: info@mundobaloncesto.com</p>
+    </footer>
+</body>
+</html>
